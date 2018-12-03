@@ -4,16 +4,13 @@ import Dependencies._
 lazy val root = (project in file(".")).settings(
   inThisBuild(
     List(
-      organization := "com.example",
-      scalaVersion := "2.12.7",
+      organization := "$organization$",
+      scalaVersion := "$scalaVersions$",
       version := "0.1.0-SNAPSHOT"
     )),
   name := "$name$",
   libraryDependencies ++= Seq(
-    scalaTest % Test,
-    scalaLogging,
-    pureconfig,
-    scalatest,
+    scalatest % Test,
     cats,
     catsEffect
   ),
@@ -29,6 +26,6 @@ lazy val root = (project in file(".")).settings(
     "-Ypartial-unification", // allow the compiler to unify type constructors of different arities
     "-language:implicitConversions"
   ),
-  addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.8"),
-  addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.3.0-M4")
+  addCompilerPlugin("org.spire-math" %% "kind-projector" % Versions.kindProjectorV),
+  addCompilerPlugin("com.olegpy" %% "better-monadic-for" % Versions.betterMonadicForV)
 )
