@@ -1,8 +1,0 @@
-import cats.effect._
-import cats.implicits._
-
-class AppSpec extends FlatSpec {
-  "it" should "work" in {
-    true shouldBe true
-  }
-}
